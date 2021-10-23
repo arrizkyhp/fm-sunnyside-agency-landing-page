@@ -3,27 +3,45 @@
 // Colors
 // Primary
 
-$red: hsl(0, 78%, 62%);
-$cyan: hsl(180, 62%, 55%);
+$soft-red: #fe7867;
+$yellow: #fad400;
+$cyan: #90d4c5;
+$dark-cyan: #2c7564;
+$light-blue: #6fceff;
+$dark-desaturated-cyan: #25564b;
+$dark-blue: #19536b;
+$dark-moderate-cyan: #458c7e;
+$white: #ffffff;
+$black: #000000;
 
 // Neutral
-$dark-blue: hsl(234, 12%, 34%);
+$very-dark-desaturated-blue: #23303e;
+$very-dark-grayish-blue: #5a636c;
+$dark-grayish-blue: #818498;
+$grayish-blue: #a7abae;
 
 // Colors Pallete
 $colors: (
-  "red": $red,
+  "soft-red": $soft-red,
   "cyan": $cyan,
+  "yellow": $yellow,
+  "dark-cyan": $dark-cyan,
+  "light-blue": $light-blue,
+  "dark-desaturated-cyan": $dark-desaturated-cyan,
+  "dark-blue": $dark-blue,
+  "dark-moderate-cyan": $dark-moderate-cyan,
 );
 
 // Font size
-$base-font-size: rem(15) !default;
+$base-font-size: rem(18) !default;
 
 // Font Weight
-$font-weight-400: 400;
+$font-weight-600: 600;
 $font-weight-700: 700;
+$font-weight-900: 900;
 
 // Border Radius
-$base-border-radius: rem(8) !default;
+// $base-border-radius: rem(8) !default;
 
 // Box-Shadow
-$base-box-shadow: 0px 10px 25px rgba($red, 0.1), 0px 10px 25px rgba($red, 0.1);
+// $base-box-shadow: 0px 10px 25px rgba($red, 0.1), 0px 10px 25px rgba($red, 0.1);

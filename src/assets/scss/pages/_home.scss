@@ -1,5 +1,7 @@
 @use "../utils" as *;
 
 main {
-  @include flex-centering();
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

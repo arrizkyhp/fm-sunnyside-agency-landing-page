@@ -1,0 +1,50 @@
+@use "../utils" as *;
+
+.about {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  img {
+    width: 100%;
+  }
+
+  .card-about {
+    @include flex-centering();
+
+    &__content {
+      @include max-width(rem(448));
+
+      &__title {
+        font-family: $base-font-franceus;
+        font-size: rem(43);
+        margin-bottom: rem(42);
+        color: $very-dark-desaturated-blue;
+      }
+
+      &__description {
+        color: $dark-grayish-blue;
+        line-height: rem(27);
+        margin-bottom: rem(30);
+      }
+    }
+  }
+
+  .link-about {
+    font-family: $base-font-franceus;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $very-dark-desaturated-blue;
+    letter-spacing: 0.12em;
+    padding-left: rem(8);
+    position: relative;
+
+    &--yellow {
+      @include about-link($yellow);
+    }
+
+    &--red {
+      @include about-link($soft-red);
+    }
+  }
+}

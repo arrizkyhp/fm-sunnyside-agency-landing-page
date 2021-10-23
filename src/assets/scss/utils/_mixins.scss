@@ -18,3 +18,22 @@
   width: 100%;
   max-width: $size;
 }
+
+@mixin about-link($colorz) {
+  &::after {
+    content: "";
+    width: rem(145);
+    height: rem(8);
+    background: $colorz;
+    opacity: 30%;
+    position: absolute;
+    border-radius: rem(50);
+    left: 0;
+    z-index: -1;
+  }
+  &:hover {
+    &::after {
+      opacity: 100%;
+    }
+  }
+}

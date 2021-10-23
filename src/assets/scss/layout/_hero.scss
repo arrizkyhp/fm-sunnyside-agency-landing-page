@@ -1,5 +1,28 @@
 @use "../utils" as *;
+@use "sass:math";
 
 .hero {
-  color: aqua;
+  background: url(assets/images/desktop/image-header.jpg);
+  background-size: cover;
+  height: 100vh;
+  padding-top: math.div(100vh, 3.5);
+
+  &__text {
+    font-family: $base-font-franceus;
+    font-size: rem(64);
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: rem(80);
+  }
+
+  &__arrow {
+    top: 0;
+    position: relative;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      top: rem(30);
+    }
+  }
 }

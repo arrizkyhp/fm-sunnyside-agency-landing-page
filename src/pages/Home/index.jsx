@@ -1,7 +1,16 @@
+import About from "layouts/About";
+import Hero from "layouts/Hero";
+import Nav from "layouts/Nav";
+import { useRef } from "react";
+
 export default function Home() {
+  const refAbout = useRef()
+
   return (
-    <main className="container">
-      <h1>Hallo</h1>
-    </main>
+    <>
+      <Nav refAbout={refAbout} />
+      <Hero refAbout={refAbout} />
+      <About refAbout={refAbout} />
+    </>
   );
 }

@@ -1,0 +1,20 @@
+@use "../utils" as *;
+
+.btn {
+  border: none;
+  padding: rem(15) rem(25);
+  border-radius: rem(50);
+  cursor: pointer;
+  font-family: $base-font-franceus;
+  text-transform: uppercase;
+
+  &.btn-desktop {
+    color: $black;
+    background: $white;
+
+    &:hover {
+      background: $light-blue;
+      color: $white;
+    }
+  }
+}
