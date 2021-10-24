@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/fm-sunnyside-agency-landing-page/static/css/main.f03eaaa8.chunk.css",
+    "main.js": "/fm-sunnyside-agency-landing-page/static/js/main.cfa984da.chunk.js",
+    "main.js.map": "/fm-sunnyside-agency-landing-page/static/js/main.cfa984da.chunk.js.map",
+    "runtime-main.js": "/fm-sunnyside-agency-landing-page/static/js/runtime-main.153c18ce.js",
+    "runtime-main.js.map": "/fm-sunnyside-agency-landing-page/static/js/runtime-main.153c18ce.js.map",
+    "static/js/2.05380ac3.chunk.js": "/fm-sunnyside-agency-landing-page/static/js/2.05380ac3.chunk.js",
+    "static/js/2.05380ac3.chunk.js.map": "/fm-sunnyside-agency-landing-page/static/js/2.05380ac3.chunk.js.map",
+    "index.html": "/fm-sunnyside-agency-landing-page/index.html",
+    "static/css/main.f03eaaa8.chunk.css.map": "/fm-sunnyside-agency-landing-page/static/css/main.f03eaaa8.chunk.css.map",
+    "static/js/2.05380ac3.chunk.js.LICENSE.txt": "/fm-sunnyside-agency-landing-page/static/js/2.05380ac3.chunk.js.LICENSE.txt",
+    "static/media/icon-arrow-down.979ef07a.svg": "/fm-sunnyside-agency-landing-page/static/media/icon-arrow-down.979ef07a.svg",
+    "static/media/image-gallery-cone.461ff421.jpg": "/fm-sunnyside-agency-landing-page/static/media/image-gallery-cone.461ff421.jpg",
+    "static/media/image-gallery-milkbottles.df1d9d84.jpg": "/fm-sunnyside-agency-landing-page/static/media/image-gallery-milkbottles.df1d9d84.jpg",
+    "static/media/image-gallery-orange.49f4212b.jpg": "/fm-sunnyside-agency-landing-page/static/media/image-gallery-orange.49f4212b.jpg",
+    "static/media/image-gallery-sugarcubes.09b72f4f.jpg": "/fm-sunnyside-agency-landing-page/static/media/image-gallery-sugarcubes.09b72f4f.jpg",
+    "static/media/style.css": "/fm-sunnyside-agency-landing-page/static/media/image-photography.104cf40b.jpg",
+    "static/media/logo-footer.57d9837b.svg": "/fm-sunnyside-agency-landing-page/static/media/logo-footer.57d9837b.svg",
+    "static/media/logo.4271b899.svg": "/fm-sunnyside-agency-landing-page/static/media/logo.4271b899.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.153c18ce.js",
+    "static/js/2.05380ac3.chunk.js",
+    "static/css/main.f03eaaa8.chunk.css",
+    "static/js/main.cfa984da.chunk.js"
+  ]
+}
