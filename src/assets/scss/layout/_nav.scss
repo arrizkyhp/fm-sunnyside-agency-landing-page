@@ -15,6 +15,10 @@ nav {
     padding: rem(0) rem(20);
   }
 
+  @include breakpoint-max(sm) {
+    top: rem(20);
+  }
+
   .nav__logo {
     width: rem(189);
     align-items: center;
@@ -44,6 +48,10 @@ nav {
       opacity: 0;
 
       -webkit-touch-callout: none;
+
+      &:focus {
+        outline: none;
+      }
 
       &:checked + .hamburger span {
         transform: rotate(45deg) translate(-2px, -1px);

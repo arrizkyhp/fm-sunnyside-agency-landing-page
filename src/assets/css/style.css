@@ -142,6 +142,11 @@ nav {
     padding: 0rem 1.25rem;
   }
 }
+@media (max-width: 450px) {
+  nav {
+    top: 1.25rem;
+  }
+}
 nav .nav__logo {
   width: 11.8125rem;
   -webkit-box-align: center;
@@ -173,6 +178,9 @@ nav #menuToggle input {
   z-index: 2;
   opacity: 0;
   -webkit-touch-callout: none;
+}
+nav #menuToggle input:focus {
+  outline: none;
 }
 nav #menuToggle input:checked + .hamburger span {
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
@@ -422,15 +430,14 @@ nav .nav__menu__list:hover {
   content: "";
   width: 9.0625rem;
   height: 0.5rem;
-  background: #fe7867;
-  opacity: 30%;
+  background: rgba(254, 120, 103, 0.3);
   position: absolute;
   border-radius: 3.125rem;
   left: 0;
   z-index: -1;
 }
 .about .link-about--red:hover::after {
-  opacity: 100%;
+  background: #fe7867;
 }
 
 .services {
