@@ -10,13 +10,28 @@ export default function Nav(props) {
         behavior: "smooth",
       });
     }
+
+    function showServices() {
+      window.scrollTo({
+        top: props.refServices.current.offsetTop - 40,
+        behavior: "smooth",
+      });
+    }
+
+    function showProjects() {
+      window.scrollTo({
+        top: props.refProjects.current.offsetTop - 80,
+        behavior: "smooth",
+      });
+    }
+
     return (
         <nav>
             <Button href="/" type="link"> <img src={logo} alt="" className="nav__logo" /></Button>
             <ul className="nav__menu">
                 <li><Button className="nav__menu__list" type="link" href="/" onClick={showAbout}>About</Button></li>
-                <li><a href="#services" className="nav__menu__list">Services</a></li>
-                <li><a href="#projects" className="nav__menu__list">Projects</a></li>
+                <li><Button className="nav__menu__list" type="link" href="/" onClick={showServices}>Services</Button></li>
+                <li><Button className="nav__menu__list" type="link" href="/" onClick={showProjects}>Projects</Button></li>
                 <li><Button isDesktop>Contact</Button></li>
         </ul>
         </nav>

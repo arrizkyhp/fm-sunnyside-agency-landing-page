@@ -1,0 +1,46 @@
+@use "../utils" as *;
+
+footer {
+  background: $cyan;
+  padding-top: rem(70);
+  padding-bottom: rem(70);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .footer__logo {
+    @include max-width(rem(180));
+    color: $dark-cyan;
+    font-weight: 700;
+    margin-bottom: rem(60);
+  }
+
+  .footer__menu {
+    display: flex;
+    gap: rem(60);
+    color: $dark-moderate-cyan;
+    margin-bottom: rem(70);
+
+    &__list {
+      font-size: rem(18);
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .footer__social-media {
+    display: flex;
+    gap: rem(30);
+
+    &__icon {
+      font-size: rem(25);
+      color: $dark-cyan;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}

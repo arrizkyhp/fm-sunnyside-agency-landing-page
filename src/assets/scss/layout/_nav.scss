@@ -24,6 +24,10 @@ nav {
     &__list {
       color: $white;
       align-self: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

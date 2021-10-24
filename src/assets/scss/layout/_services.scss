@@ -1,0 +1,44 @@
+@use "../utils" as *;
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__text {
+    width: 100%;
+    height: rem(600);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: rem(70);
+
+    h1 {
+      font-family: $base-font-franceus;
+      margin-bottom: rem(30);
+      font-size: rem(30);
+    }
+
+    p {
+      font-size: rem(17);
+      @include max-width(rem(362));
+      line-height: rem(25.5);
+    }
+  }
+
+  &__graphic-design {
+    background: url(assets/images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $dark-desaturated-cyan;
+  }
+
+  &__photography {
+    background: url(assets/images/desktop/image-photography.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $dark-blue;
+  }
+}

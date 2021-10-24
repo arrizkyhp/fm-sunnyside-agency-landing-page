@@ -1,0 +1,11 @@
+@use "../utils" as *;
+
+.projects {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  &__image {
+    width: 100%;
+  }
+}

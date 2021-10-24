@@ -1,18 +1,45 @@
-const Footer = () => {
+import logoFooter from 'assets/images/logo-footer.svg'
+import Button from 'components/Button';
+
+import { FaFacebookSquare, FaInstagram, FaTwitter, FaPinterest } from 'react-icons/fa'
+
+const Footer = (props) => {
+   function showAbout() {
+     window.scrollTo({
+       top: props.refAbout.current.offsetTop,
+       behavior: "smooth",
+     });
+   }
+
+   function showServices() {
+     window.scrollTo({
+       top: props.refServices.current.offsetTop - 40,
+       behavior: "smooth",
+     });
+   }
+
   return (
     <footer>
-      <div className="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">
-          {" "}
-          Frontend Mentor
-        </a>
-        . Coded by{" "}
-        <a href="https://github.com/arrizkyhp" target="_blank" rel="noreferrer">
-          {" "}
-          Arrizky Hasya Pratama.{" "}
-        </a>
-      </div>
+     <img src={logoFooter} alt="sunnyside logo" className="footer__logo" />
+     <ul className="footer__menu">
+       <li><Button className="footer__menu__list" type="link" href="/" onClick={showAbout}>About</Button></li>
+       <li><Button className="footer__menu__list" type="link" href="/" onClick={showServices}>Services</Button></li>
+       <li><Button className="footer__menu__list" type="link" href="/">Projects</Button></li>
+     </ul>
+    <div className="footer__social-media">
+      <Button className="footer__social-media__icon" type="link" href="/">
+        <FaFacebookSquare />
+      </Button>
+      <Button className="footer__social-media__icon" type="link" href="/">
+        <FaInstagram />
+      </Button>
+      <Button className="footer__social-media__icon" type="link" href="/">
+        <FaTwitter />
+      </Button>
+      <Button className="footer__social-media__icon" type="link" href="/">
+        <FaPinterest />
+      </Button>
+    </div>
     </footer>
   );
 };
