@@ -417,14 +417,14 @@ nav .nav__menu__list:hover {
   width: 9.0625rem;
   height: 0.5rem;
   background: #fad400;
-  opacity: 30%;
+  background: rgba(250, 212, 0, 0.3);
   position: absolute;
   border-radius: 3.125rem;
   left: 0;
   z-index: -1;
 }
 .about .link-about--yellow:hover::after {
-  opacity: 100%;
+  ackground: #fad400;
 }
 .about .link-about--red::after {
   content: "";
