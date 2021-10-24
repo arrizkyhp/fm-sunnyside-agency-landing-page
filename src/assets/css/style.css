@@ -178,6 +178,7 @@ nav #menuToggle input {
   z-index: 2;
   opacity: 0;
   -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 nav #menuToggle input:focus {
   outline: none;
