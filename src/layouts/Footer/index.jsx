@@ -18,13 +18,20 @@ const Footer = (props) => {
      });
    }
 
+       function showProjects() {
+         window.scrollTo({
+           top: props.refProjects.current.offsetTop - 80,
+           behavior: "smooth",
+         });
+       }
+
   return (
     <footer>
      <img src={logoFooter} alt="sunnyside logo" className="footer__logo" />
      <ul className="footer__menu">
        <li><Button className="footer__menu__list" type="link" href="/" onClick={showAbout}>About</Button></li>
        <li><Button className="footer__menu__list" type="link" href="/" onClick={showServices}>Services</Button></li>
-       <li><Button className="footer__menu__list" type="link" href="/">Projects</Button></li>
+       <li><Button className="footer__menu__list" type="link" href="/" onClick={showProjects}>Projects</Button></li>
      </ul>
     <div className="footer__social-media">
       <Button className="footer__social-media__icon" type="link" href="/">

@@ -20,6 +20,11 @@ footer {
     gap: rem(60);
     color: $dark-moderate-cyan;
     margin-bottom: rem(70);
+    align-items: center;
+
+    @include breakpoint-max(sm) {
+      gap: rem(50);
+    }
 
     &__list {
       font-size: rem(18);

@@ -5,6 +5,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
+  @include breakpoint-max(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &__image {
     width: 100%;
   }

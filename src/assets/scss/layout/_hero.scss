@@ -4,8 +4,18 @@
 .hero {
   background: url(assets/images/desktop/image-header.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
   padding-top: math.div(100vh, 3.5);
+
+  @include breakpoint-max(sm) {
+    padding-top: math.div(100vh, 3.8);
+    background: url(assets/images/mobile/image-header.jpg), $blue;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
 
   &__text {
     font-family: $base-font-franceus;
@@ -14,6 +24,16 @@
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: rem(80);
+
+    @include breakpoint-max(lg) {
+      font-size: rem(45);
+    }
+
+    @include breakpoint-max(sm) {
+      font-size: rem(41);
+      text-align: center;
+      margin-bottom: rem(60);
+    }
   }
 
   &__arrow {

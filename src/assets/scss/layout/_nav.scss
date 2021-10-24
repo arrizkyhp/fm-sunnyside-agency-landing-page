@@ -1,25 +1,137 @@
 @use "../utils" as *;
+@use "sass:math";
 
 nav {
   position: absolute;
-  top: 0;
   top: rem(40);
-  left: rem(40);
-  right: rem(40);
+  padding: rem(0) rem(40);
   height: rem(42.9);
   display: flex;
-  width: 94%;
+  width: 100%;
+  align-items: center;
   justify-content: space-between;
+
+  @include breakpoint-max(md) {
+    padding: rem(0) rem(20);
+  }
 
   .nav__logo {
     width: rem(189);
-    align-self: flex-start;
+    align-items: center;
+
+    @include breakpoint-max(sm) {
+      width: rem(130);
+    }
+  }
+
+  #menuToggle {
+    display: none;
+    position: relative;
+
+    @include breakpoint-max(md) {
+      display: block;
+    }
+
+    input {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      width: 40px;
+      height: 32px;
+      top: 0;
+      left: rem(-4);
+      z-index: 2;
+      opacity: 0;
+
+      -webkit-touch-callout: none;
+
+      &:checked + .hamburger span {
+        transform: rotate(45deg) translate(-2px, -1px);
+      }
+
+      &:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+
+      &:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -1px);
+        top: rem(3);
+      }
+    }
+
+    .hamburger {
+      span {
+        display: block;
+        width: rem(34);
+        height: rem(4);
+        margin-bottom: rem(5);
+        position: relative;
+        background: $white;
+        border-radius: rem(3);
+        transform-origin: 4px 0px;
+
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+
+        &:first-child {
+          transform-origin: 0% 0%;
+        }
+
+        &:last-child {
+          transform-origin: 0% 100%;
+        }
+      }
+    }
   }
 
   .nav__menu {
     display: flex;
     gap: rem(50);
     align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    // width: 100%;
+    align-self: flex-end;
+    // display: block;
+
+    &.show {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: rem(-430);
+      background-color: $white;
+      width: math.div(100%, 1.15);
+      // margin-right: rem(40);
+      padding: rem(60) rem(30);
+      z-index: 100;
+
+      transition: height 1s ease-in;
+
+      @include breakpoint-max(sm) {
+        width: math.div(100%, 1.17);
+      }
+
+      &::after {
+        content: "";
+        width: rem(35);
+        height: rem(35);
+        border-right: 0px solid $white;
+        border-left: 35px solid transparent;
+        border-bottom: 35px solid $white;
+        position: absolute;
+        top: rem(-35);
+        right: 0;
+      }
+
+      .nav__menu__list {
+        color: $grayish-blue;
+        font-size: rem(18);
+      }
+    }
+
+    @include breakpoint-max(md) {
+      display: none;
+    }
 
     &__list {
       color: $white;

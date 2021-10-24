@@ -14,7 +14,7 @@ export default function About(props) {
 Engage your clients through compelling visuals that do most of the marketing for you."
           color="yellow"
         />
-        <img src={eggImage} alt="egg with yellow background" />
+        <img src={eggImage} alt="egg with yellow background" className="egg-image"/>
         <img src={glassImage} alt="egg with yellow background" />
         <CardAbout
           className="link-about"

@@ -5,8 +5,18 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  @include breakpoint-max(md) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   img {
     width: 100%;
+
+    &.egg-image {
+      @include breakpoint-max(md) {
+        order: -1;
+      }
+    }
   }
 
   .card-about {
@@ -15,11 +25,28 @@
     &__content {
       @include max-width(rem(448));
 
+      @include breakpoint-max(lg) {
+        padding: rem(0) rem(20);
+      }
+
+      @include breakpoint-max(md) {
+        padding: rem(70) rem(20);
+      }
+
+      @include breakpoint-max(sm) {
+        text-align: center;
+      }
+
       &__title {
         font-family: $base-font-franceus;
         font-size: rem(43);
         margin-bottom: rem(42);
         color: $very-dark-desaturated-blue;
+
+        @include breakpoint-max(lg) {
+          font-size: rem(30);
+          margin-bottom: rem(30);
+        }
       }
 
       &__description {
