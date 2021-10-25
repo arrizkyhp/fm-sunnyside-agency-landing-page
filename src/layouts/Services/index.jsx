@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Services(props) {
     return (
-      <section className="services" ref={props.refServices}>
+      <div className="services" ref={props.refServices}>
         <div className="services__text services__graphic-design">
           <div className="services__graphic-design__content">
             <h1 className="title">Graphic design</h1>
@@ -15,6 +15,6 @@ export default function Services(props) {
             <p className="description">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p>
           </div>
         </div>
-      </section>
+      </div>
     );
 }

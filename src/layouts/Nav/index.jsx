@@ -34,7 +34,7 @@ export default function Nav(props) {
 
     return (
         <nav>
-            <Button href="/" type="link"> <img src={logo} alt="" className="nav__logo" /></Button>
+            <Button href="/" type="link"> <img src={logo} alt="sunnyside" className="nav__logo" /></Button>
             <div id="menuToggle">
               <input type="checkbox" onClick={showMenu}/>
               <div className="hamburger">

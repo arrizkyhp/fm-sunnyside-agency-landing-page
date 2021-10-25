@@ -6,7 +6,7 @@ import glassImage from 'assets/images/desktop/image-stand-out.jpg'
 
 export default function About(props) {
     return (
-      <section className="about" ref={props.refAbout}>
+      <div className="about" ref={props.refAbout}>
         <CardAbout
           className="link-about"
           title="Transform your brand"
@@ -22,6 +22,6 @@ Engage your clients through compelling visuals that do most of the marketing for
           description="Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places."
           color="red"
         />
-      </section>
+      </div>
     );
 }

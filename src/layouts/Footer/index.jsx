@@ -35,15 +35,19 @@ const Footer = (props) => {
      </ul>
     <div className="footer__social-media">
       <Button className="footer__social-media__icon" type="link" href="/">
+        <span className="visually-hidden">Facebook</span>
         <FaFacebookSquare />
       </Button>
       <Button className="footer__social-media__icon" type="link" href="/">
+        <span className="visually-hidden">Instagram</span>
         <FaInstagram />
       </Button>
       <Button className="footer__social-media__icon" type="link" href="/">
+        <span className="visually-hidden">Twitter</span>
         <FaTwitter />
       </Button>
       <Button className="footer__social-media__icon" type="link" href="/">
+        <span className="visually-hidden">Pinterest</span>
         <FaPinterest />
       </Button>
     </div>

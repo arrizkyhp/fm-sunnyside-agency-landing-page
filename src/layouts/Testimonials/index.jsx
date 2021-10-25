@@ -6,7 +6,7 @@ import thomasPict from 'assets/images/image-thomas.jpg';
 
 export default function Testimonials() {
     return (
-      <section className="testimonials">
+      <div className="testimonials">
         <h1 className="testimonials__title">Client Testimonials</h1>
         <div className="testimonials__cards">
           <div className="card-testimonial">
@@ -34,6 +34,6 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     );
 }
