@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# Frontend Mentor - Sunnyside agency landing page solution
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-### `npm start`
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### The challenge
 
-### `npm test`
+Users should be able to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-### `npm run build`
+### Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![desktop](./desktop.png)
+[📱 Mobile Version](./mobile.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 📌 Solution URL: [Solution](https://github.com/arrizkyhp/fm-sunnyside-agency-landing-page)
+- 🎪 Live Site URL: [Live Site](https://arrizkyhp.github.io/fm-sunnyside-agency-landing-page/)
 
-### `npm run eject`
+## My process
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Built with
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- BEM naming
+- [Sass](https://sass-lang.com/) - CSS extension
+- [GulpJS](https://gulpjs.com/) - JS library
+- [ReactJS](https://reactjs.org/) - JS library
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### What I learned
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This challenge i learned how to make hamburger button on mobile view.
 
-## Learn More
+because i'm using reactjs, i used useState for toggle hamburger checkbox
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```html
+<div id="menuToggle">
+  <input type="checkbox" onClick="{showMenu}" />
+  <div className="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```scss
+#menuToggle {
+  display: none;
+  position: relative;
 
-### Code Splitting
+  @include breakpoint-max(md) {
+    display: block;
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  input {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    height: 32px;
+    top: 0;
+    left: rem(-4);
+    z-index: 2;
+    opacity: 0;
 
-### Analyzing the Bundle Size
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    &:focus {
+      outline: none;
+    }
 
-### Making a Progressive Web App
+    &:checked + .hamburger span {
+      transform: rotate(45deg) translate(-2px, -1px);
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    &:checked + .hamburger span:nth-child(2) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
 
-### Advanced Configuration
+    &:checked + .hamburger span:nth-child(3) {
+      transform: rotate(-45deg) translate(0, -1px);
+      top: rem(3);
+    }
+  }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  .hamburger {
+    span {
+      display: block;
+      width: rem(34);
+      height: rem(4);
+      margin-bottom: rem(5);
+      position: relative;
+      background: $white;
+      border-radius: rem(3);
+      transform-origin: 4px 0px;
 
-### Deployment
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
 
-### `npm run build` fails to minify
+      &:last-child {
+        transform-origin: 0% 100%;
+      }
+    }
+  }
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```js
+import React, { useState } from 'react'
+
+export default function Nav(props) {
+    const [checked, isChecked] = useState(false)
+
+    .....
+
+
+    const showMenu = () => {
+      isChecked(!checked);
+      console.log(checked)
+    }
+```
+
+### Useful resources
+
+- [Pure CSS Hamburger fold-out menu](https://codepen.io/erikterwan/pen/EVzeRP) - This helped me for Hamburger icon on mobile view.
+
+- [Responsive topnav](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav) - This helped me for Hamburger icon on mobile view.
+
+## Author
+
+- Github - [arrizkyhp](https://github.com/arrizkyhp)
+- Frontend Mentor - [@arrizkyhp](https://www.frontendmentor.io/profile/arrizkyhp)
+- Twitter - [@arrizkyhp](https://twitter.com/arrizkyhp)
