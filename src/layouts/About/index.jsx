@@ -6,7 +6,7 @@ import glassImage from 'assets/images/desktop/image-stand-out.jpg'
 
 export default function About(props) {
     return (
-      <div className="about" ref={props.refAbout}>
+      <div className="about" ref={props.refAbout} role="complementary">
         <CardAbout
           className="link-about"
           title="Transform your brand"

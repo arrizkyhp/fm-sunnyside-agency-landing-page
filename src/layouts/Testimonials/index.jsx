@@ -6,7 +6,7 @@ import thomasPict from 'assets/images/image-thomas.jpg';
 
 export default function Testimonials() {
     return (
-      <div className="testimonials">
+      <div className="testimonials" role="complementary">
         <h1 className="testimonials__title">Client Testimonials</h1>
         <div className="testimonials__cards">
           <div className="card-testimonial">

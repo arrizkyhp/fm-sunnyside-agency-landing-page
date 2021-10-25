@@ -7,11 +7,11 @@ import img4 from 'assets/images/desktop/image-gallery-sugarcubes.jpg'
 
 export default function Projects(props) {
     return (
-        <div className="projects" ref={props.refProjects}>
-            <img src={img1} alt="milk bottles" className="projects__image"/>
-            <img src={img2} alt="orange in bowl" className="projects__image"/>
-            <img src={img3} alt="ice cream cone" className="projects__image"/>
-            <img src={img4} alt="sugar cubes" className="projects__image"/>
-        </div>
-    )
+      <div className="projects" ref={props.refProjects} role="complementary">
+        <img src={img1} alt="milk bottles" className="projects__image" />
+        <img src={img2} alt="orange in bowl" className="projects__image" />
+        <img src={img3} alt="ice cream cone" className="projects__image" />
+        <img src={img4} alt="sugar cubes" className="projects__image" />
+      </div>
+    );
 }

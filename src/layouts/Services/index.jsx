@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Services(props) {
     return (
-      <div className="services" ref={props.refServices}>
+      <div className="services" ref={props.refServices} role="complementary">
         <div className="services__text services__graphic-design">
           <div className="services__graphic-design__content">
             <h1 className="title">Graphic design</h1>
